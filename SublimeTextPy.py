@@ -1,13 +1,15 @@
-def array_diff(a, b):
-    abba = []
+def is_isogram(string):
     #your code here
-    for i in a:
-        if i not in b:
-            abba.append(i)
-    return abba
+    check = []
+    lowString = string.lower()
+    for l in lowString:
+        if l not in check:
+            check.append(l)
+#        if l not in check.keys():
+#            check[l] = check.get(l,0)+1
+    return len(check) == len(string)
+#    return len(check.keys()) == len(string)
 
-
-a = [1,2,2,2]
-b = [2]
-
-print(array_diff(a,b))
+print(is_isogram('abba'))
+print(is_isogram('alef'))
+    
